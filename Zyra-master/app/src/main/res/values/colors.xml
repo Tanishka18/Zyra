@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="black">#000000</color>
+    <!-- Primary Branding -->
+    <color name="colorPrimary">#1E88E5</color>   <!-- Deep Blue -->
+    <color name="colorPrimaryVariant">#1565C0</color>
+    <color name="colorSecondary">#29B6F6</color> <!-- Light Cyan -->
+
+    <!-- Risk Levels -->
+    <color name="colorSafe">#43A047</color>      <!-- Green -->
+    <color name="colorSuspicious">#FDD835</color> <!-- Amber -->
+    <color name="colorDanger">#E53935</color>    <!-- Red -->
+    <color name="colorHighRisk">#E53935</color>   <!-- Red -->
+    <color name="colorMediumRisk">#FB8C00</color> <!-- Orange -->
+    <color name="colorLowRisk">#43A047</color>    <!-- Green -->
+
+    <!-- Backgrounds -->
+    <color name="backgroundLight">#FAFAFA</color>
+    <color name="backgroundDark">#121212</color>
+
+    <!-- Text -->
+    <color name="textPrimaryLight">#212121</color>
+    <color name="textSecondaryLight">#757575</color>
+    <color name="textPrimaryDark">#FFFFFF</color>
+    <color name="textSecondaryDark">#BDBDBD</color>
+
+    <color name="teal_200">#03DAC5</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="red">#FF0000</color>
+
+</resources>

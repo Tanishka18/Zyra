@@ -1,0 +1,61 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/backgroundLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Event Type + Risk Chip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEventDetailType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/suspicious_login"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimaryLight"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                app:chipCornerRadius="8dp"
+                app:chipStrokeWidth="0dp"/>
+        </LinearLayout>
+
+        <!-- Description / Details -->
+        <TextView
+            android:id="@+id/tvEventDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details of the event go here..."
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimaryLight"/>
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tvEventDetailTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-08-20 12:55"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondaryLight"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

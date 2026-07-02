@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Zyra</string>
+    <string name="app_logo">Zyra</string>
+
+    <!-- Dashboard -->
+    <string name="risk_status">Risk Status</string>
+    <string name="see_timeline">See Timeline</string>
+    <string name="see_details">Details</string>
+    <string name="reauthenticate">Re-authenticate</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="monitor_touch">Monitor Touch</string>
+    <string name="monitor_typing">Monitor Typing</string>
+    <string name="monitor_location">Monitor Location</string>
+    <string name="privacy_note">All analysis happens on-device</string>
+    <string name="timeline">Timeline</string>
+    <string name="suspicious_login">Suspicious Login</string>
+    <string name="unusual_typing_rhythm_detected">Unusual typing rhythm detected</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="profile_picture">pfp</string>
+    <string name="name">Harkiran Kaur</string>
+    <string name="mail">harkiran@example.com</string>
+    <string name="risk_summary">risk summary\n</string>
+    <string name="all_systems_normal">All systems normal</string>
+    <string name="edit_profile">edit profile</string>
+    <string name="logout">logout\n</string>
+</resources>

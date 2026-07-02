@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollDashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="72dp"
+    android:background="?attr/colorSurface">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="20dp">
+
+<!-- Title -->
+<TextView
+    android:id="@+id/tvDashboardTitle"
+    style="@style/TitleText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/risk_status"
+    android:layout_marginBottom="20dp" />
+
+<!-- Risk Card -->
+<androidx.cardview.widget.CardView
+    android:id="@+id/riskCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/backgroundLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvRiskLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safe"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSafe" />
+
+        <TextView
+            android:id="@+id/tvRiskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal behavior detected"
+            android:layout_marginTop="10dp"
+            style="@style/BodyText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+<!-- Pie Chart -->
+<com.github.mikephil.charting.charts.PieChart
+    android:id="@+id/pieChart"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginBottom="20dp" />
+
+<!-- Line Chart -->
+<com.github.mikephil.charting.charts.LineChart
+    android:id="@+id/lineChart"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginBottom="20dp" />
+
+<!-- Buttons Row -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="20dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTimeline"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/see_timeline" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDetails"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/see_details" />
+</LinearLayout>
+
+<!-- Re-authenticate Button -->
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btnReAuth"
+    style="@style/Widget.MaterialComponents.Button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/reauthenticate" />
+
+</LinearLayout>
+    </ScrollView>

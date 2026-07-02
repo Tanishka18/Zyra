@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Event Type / Stat Name -->
+        <TextView
+            android:id="@+id/tvStatTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suspicious_login"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimaryLight"/>
+
+        <!-- Risk Chip aligned to top-right -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipRisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safe"
+            android:textSize="12sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/tvStatTitle"
+            app:chipCornerRadius="8dp"
+            app:chipStrokeWidth="0dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
+
+        <!-- Details / Value -->
+        <TextView
+            android:id="@+id/tvStatDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unusual_typing_rhythm_detected"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondaryLight"
+            android:layout_below="@id/tvStatTitle"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tvStatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-08-20 12:45"
+            android:textSize="12sp"
+            android:textColor="@color/textSecondaryLight"
+            android:layout_below="@id/tvStatDetails"
+            android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

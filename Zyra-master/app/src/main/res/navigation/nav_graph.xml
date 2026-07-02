@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.zyra.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_timelineFragment"
+            app:destination="@id/timelineFragment" />
+    </fragment>
+
+    <!-- Timeline Fragment -->
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.example.zyra.ui.timeline.TimelineFragment"
+        android:label="Timeline"
+        tools:layout="@layout/activity_timeline">
+        <action
+            android:id="@+id/action_timelineFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+
+    <!-- Event Details Fragment -->
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.example.zyra.ui.timeline.EventDetailsFragment"
+        android:label="Event Details"
+        tools:layout="@layout/fragment_event_details">
+        <argument
+            android:name="eventId"
+            app:argType="string" /> <!-- or int, match your Event ID type -->
+    </fragment>
+
+    <!-- Profile Fragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.zyra.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Dashboard Fragment -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.zyra.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/activity_dashboard" />
+
+</navigation>

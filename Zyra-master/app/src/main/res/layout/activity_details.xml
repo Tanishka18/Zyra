@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title & Type -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Safe • Location"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Suspicious • Typing"
+            android:textSize="22sp" android:textStyle="bold"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="02:35 PM, Aug 20 2025"
+            android:textColor="@android:color/darker_gray" android:textSize="12sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Risk score card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp" app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="16dp" android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRiskScore"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Risk Score: 72/100" android:textStyle="bold" android:textSize="18sp"/>
+
+                <ProgressBar
+                    android:id="@+id/pbRisk"
+                    android:progressTint="@color/colorDanger"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent" android:layout_height="10dp"
+                    android:progress="72" android:max="100"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvConfidence"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Confidence: 87%" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Explanation -->
+        <TextView
+            android:text="What happened"
+            android:textStyle="bold" android:textSize="16sp" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Typing rhythm deviated 3.2σ from your baseline."
+            android:layout_marginTop="6dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Suggested actions -->
+        <TextView
+            android:text="Suggested actions"
+            android:textStyle="bold" android:textSize="16sp" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/btnMarkMe"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="This was me"/>
+
+            <Button
+                android:id="@+id/btnReAuth"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="12dp"
+                android:text="Re-authenticate"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Report issue" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

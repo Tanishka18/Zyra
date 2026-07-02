@@ -13,8 +13,7 @@ The project is currently under active development, with core functionality imple
 6) User profile and settings management
 7) Privacy-focused on-device processing using TensorFlow Lite
 
-**Tech Stack
-**
+**Tech Stack**
 1) Kotlin
 2) Android SDK
 3) Gradle (Kotlin DSL)
